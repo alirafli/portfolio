@@ -9,10 +9,10 @@ import SkillLayout from '../components/SkillLayout.astro'
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import astro from '../assets/about-astro.png'
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Indonesia', 'English']
+const frontend = ['HTML', 'Javascript', 'ReactJS', 'React Native', 'NextJS', 'Typescript']
+const styling = ['CSS', 'SASS', 'Tailwind', 'Styled Components']
+const others = ['Java']
 
 const contactInfo = [
 	{
@@ -193,8 +193,8 @@ const blogs = [
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='CSS Styling' skills={styling} />
+			<SkillLayout title='Tech' skills={others} />
 		</Section>
 	</div>
 </PageLayout>
