@@ -5,7 +5,10 @@ import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
+
 import { experiences } from '@/data/experiences.tsx'
+import { contactInfo } from '@/data/contactInfo.tsx'
+import { blogs } from '@/data/blogs.tsx'
 
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
@@ -14,47 +17,6 @@ const languages = ['Indonesia', 'English']
 const frontend = ['HTML', 'Javascript', 'ReactJS', 'React Native', 'NextJS', 'Typescript']
 const styling = ['CSS', 'SASS', 'Tailwind', 'Styled Components']
 const others = ['Java']
-
-const contactInfo = [
-	{
-		title: 'Frontend Engineer',
-		icon: 'mdi:work-outline',
-		disabled: true
-	},
-	{
-		title: 'Resume',
-		icon: 'mdi:file-document-outline',
-		href: '/src/assets/CV_Mohammad Ali Rafli.pdf',
-		disabled: false
-	},
-	{
-		title: 'Linkedin',
-		icon: 'mdi:linkedin',
-		href: 'https://www.linkedin.com/in/mohammad-ali-rafli/',
-		disabled: false
-	},
-	{
-		title: 'mrafli1212@gmail.com',
-		icon: 'mdi:email-outline',
-		href: 'mailto:mrafli1212@gmail.com',
-		disabled: false
-	},
-	{
-		title: '@alirafli_',
-		icon: 'mdi:instagram',
-		href: 'https://www.instagram.com/alirafli_/',
-		disabled: false
-	}
-]
-
-const blogs = [
-	{
-		title:
-			'Implementing Jest-Image-Snapshot in a ReactJS Typescript Project with Puppeteer for Visual Slicing Comparison',
-		date: 'Mar 8, 2024',
-		href: 'https://medium.com/@mrafli1212/implementing-jest-image-snapshot-in-a-reactjs-typescript-project-with-puppeteer-for-visual-slicing-fd91b33fe5c4'
-	}
-]
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
