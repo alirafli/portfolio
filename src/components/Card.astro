@@ -13,6 +13,9 @@ const {
 	imagePath,
 	altText,
 	imageClass,
+	headingCenter = false,
+	multiple = false,
+	multipleData,
 	...props
 } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
@@ -43,11 +46,32 @@ if (imagePath) {
 		)
 	}
 	<div class='flex flex-col gap-y-1.5'>
-		<div class='flex flex-col gap-y-0.5'>
-			<h1 class='text-lg font-medium'>{heading}</h1>
-			<h2 class='text-muted-foreground'>{subheading}</h2>
-			<h2 class='text-muted-foreground'>{date}</h2>
-		</div>
-		<slot />
+		{
+			multiple ? (
+				<>
+					<h1 class={cn('text-lg font-medium', headingCenter && 'text-center')}>{heading}</h1>
+					{multipleData.map((data: { role: string; date: string; desc: string[] }) => (
+						<div class='mb-2 flex flex-col gap-y-0.5'>
+							<h2 class='text-muted-foreground'>{data.role}</h2>
+							<h2 class='text-muted-foreground'>{data.date}</h2>
+							<ul class='ml-4 list-disc text-muted-foreground'>
+								{data?.desc?.map((data) => (
+									<li>{data}</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</>
+			) : (
+				<>
+					<div class='flex flex-col gap-y-0.5'>
+						<h1 class={cn('text-lg font-medium', headingCenter && 'text-center')}>{heading}</h1>
+						<h2 class='text-muted-foreground'>{subheading}</h2>
+						<h2 class='text-muted-foreground'>{date}</h2>
+					</div>
+					<slot />
+				</>
+			)
+		}
 	</div>
 </Tag>

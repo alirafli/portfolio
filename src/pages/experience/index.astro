@@ -1,58 +1,9 @@
 ---
 import PageLayout from '@/layouts/BaseLayout.astro'
-import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
+import  {experiences} from '@/data/experiences.tsx'
+import Card from '@/components/Card.astro'
 
-const DESIGN = [
-	{
-		name: 'Figma',
-		description: 'Design Tool',
-		href: 'https://www.figma.com/',
-		iconPath: 'figma',
-		iconBgColour: '#000001'
-	}
-]
-
-const PRODUCTIVITY = [
-	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
-	},
-	{
-		name: 'Notion',
-		description: 'Note Taking',
-		href: 'https://www.notion.so/product',
-		iconPath: 'notion',
-		iconBgColour: '#EFEFEE'
-	},
-	{
-		name: 'Obsidian',
-		description: 'Long-form Writing',
-		href: 'https://obsidian.md/',
-		iconPath: 'obsidian',
-		iconBgColour: '#7A3EE8'
-	}
-]
-
-const DEVELOPMENT = [
-	{
-		name: 'VS Code',
-		description: 'IDE',
-		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
-		iconBgColour: '#2C2C32'
-	},
-	{
-		name: 'ChatGPT',
-		description: 'AI',
-		href: 'https://chat.openai.com/',
-		iconPath: 'chatgpt',
-		iconBgColour: '#06A67F'
-	}
-]
 ---
 
 <PageLayout meta={{ title: 'Experience' }}>
@@ -75,13 +26,30 @@ const DEVELOPMENT = [
 
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
-				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
-				<p>Tools and software I use daily</p>
+				<h1 class='mb-1 text-2xl font-bold'>experience ({experiences.length})</h1>
+				<p>activities that I have participated in to develop myself</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
+			{
+				experiences.map((data) => (
+					<Card
+						heading={data.title}
+						subheading={data.role}
+						date={data.date}
+						imagePath={data.imagePath}
+						altText={data.title}
+            multiple={data.multiple}
+            multipleData={data.multipleData}
+						imageClass='h-12 w-12 object-contain md:-left-16 rounded-xl'
+					>
+						<ul class='ml-4 list-disc text-muted-foreground'>
+							{data?.desc?.map((data) => (
+								<li>{data}</li>
+							))}
+						</ul>
+					</Card>
+				))
+			}
 		</div>
 	</div>
 </PageLayout>
