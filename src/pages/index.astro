@@ -39,6 +39,15 @@ const contactInfo = [
 		disabled: false
 	}
 ]
+
+const blogs = [
+	{
+		title:
+			'Implementing Jest-Image-Snapshot in a ReactJS Typescript Project with Puppeteer for Visual Slicing Comparison',
+		date: 'Mar 8, 2024',
+		href: 'https://medium.com/@mrafli1212/implementing-jest-image-snapshot-in-a-reactjs-typescript-project-with-puppeteer-for-visual-slicing-fd91b33fe5c4'
+	}
+]
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -110,7 +119,11 @@ const contactInfo = [
 		</Section>
 
 		<Section title='Blogs'>
-			<Card heading='Lorem Ipsum' date='Dec 2022 - Nov 2023' />
+			{
+				blogs.map((data) => (
+					<Card heading={data.title} date={data.date} as='a' target='_blank' href={data.href} />
+				))
+			}
 		</Section>
 
 		<Section title='Education'>
