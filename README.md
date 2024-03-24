@@ -6,3 +6,4 @@
 - [minirezume-framer](https://minirezume.framer.website/) for resume homepage design
 
 ### Create with Astro Template
+[template](https://astro.build/themes/details/resume/)
