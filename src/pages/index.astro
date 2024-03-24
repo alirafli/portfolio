@@ -48,6 +48,54 @@ const blogs = [
 		href: 'https://medium.com/@mrafli1212/implementing-jest-image-snapshot-in-a-reactjs-typescript-project-with-puppeteer-for-visual-slicing-fd91b33fe5c4'
 	}
 ]
+
+const experiences = [
+	{
+		title: 'Delos',
+		role: 'Frontend Web Developer Intern',
+		date: 'Jun 2023 - Mar 2024',
+		imagePath: '/src/assets/delos-logo.png',
+		desc: [
+			'Enhancing and managing product line dashboards for efficient data management, utilizing Next.js and TypeScript for dashboard improvements and code optimization. Additionally, contributed to the design system by creating and refining components with TypeScript and Storybook, significantly improving interface consistency and usability across products.'
+		]
+	},
+	{
+		title: 'Ruangguru Bootcamp - Kampus Merdeka',
+		role: 'Frontend Engineering',
+		date: 'Jan 2023 - Jul 2023',
+		imagePath: '/src/assets/ruangguru-logo.png',
+		desc: [
+			"Learning web frontend skills through the MBKM program's Bootcamp Learning Plan, focusing on JavaScript and React.js in both basic and advanced front-end development."
+		]
+	},
+	{
+		title: 'Social Circles Co.',
+		role: 'Software Engineer Intern',
+		date: 'Dec 2022 - Mar 2023',
+		imagePath: '/src/assets/socles-logo.jpg',
+		desc: [
+			'Played a key role in the development of the Socles Social App, employing React Native Ignite (Typescript), and the Socles Web App, using Next.js (Typescript), contributing to significant user engagement growth.'
+		]
+	},
+	{
+		title: 'Basic Computing Community (BCC)',
+		role: 'Head of Frontend Department',
+		date: 'Dec 2022 - Oct 2023',
+		imagePath: '/src/assets/bcc-logo.png',
+		desc: [
+			'Oversaw and led multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+		]
+	},
+	{
+		title: 'Basic Computing Community (BCC)',
+		role: 'Deputy Head of Frontend Department',
+		date: 'Jan 2022 - Dec 2022',
+		imagePath: '/src/assets/bcc-logo.png',
+		desc: [
+			'Oversaw and led multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+		]
+	}
+]
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -90,35 +138,28 @@ const blogs = [
 			</p>
 		</Section>
 
-		<Section title='Experience'>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
+		<Section title=`Experience (${experiences.length})`>
+			{
+				experiences.map((data) => (
+					<Card
+						heading={data.title}
+						subheading={data.role}
+						date={data.date}
+						imagePath={data.imagePath}
+						altText={data.title}
+						imageClass='h-12 w-12 object-contain md:-left-16 rounded-xl'
+					>
+						<ul class='ml-4 list-disc text-muted-foreground'>
+							{data.desc.map((data) => (
+								<li>{data}</li>
+							))}
+						</ul>
+					</Card>
+				))
+			}
 		</Section>
 
-		<Section title='Blogs'>
+		<Section title=`Blogs (${blogs.length})`>
 			{
 				blogs.map((data) => (
 					<Card heading={data.title} date={data.date} as='a' target='_blank' href={data.href} />
