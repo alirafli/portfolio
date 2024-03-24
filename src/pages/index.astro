@@ -9,6 +9,7 @@ import SkillLayout from '../components/SkillLayout.astro'
 import { experiences } from '@/data/experiences.tsx'
 import { contactInfo } from '@/data/contactInfo.tsx'
 import { blogs } from '@/data/blogs.tsx'
+import { activities } from '@/data/activities.tsx'
 
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
@@ -69,7 +70,43 @@ const others = ['Java']
 						imagePath={data.imagePath}
 						altText={data.title}
 						multiple={data.multiple}
+						imageClass='h-12 w-12 object-contain md:-left-16 rounded-xl'
+					>
+						<ul class='ml-4 list-disc text-muted-foreground'>
+							{data?.desc?.map((data) => (
+								<li>{data}</li>
+							))}
+						</ul>
+					</Card>
+				))
+			}
+
+			{
+				experiences.length > 4 && (
+					<Card
+						heading={`See More (+${experiences.length - 4})`}
+						headingCenter
+						href='/experience'
+						as='a'
+					/>
+				)
+			}
+		</Section>
+
+		<Section title=`Activities (${activities.length})`>
+			{
+				activities.slice(0, 4).map((data) => (
+					<Card
+						heading={data.title}
+						subheading={data.role}
+						date={data.date}
+						imagePath={data.imagePath}
+						altText={data.title}
+						multiple={data.multiple}
+						sourceCode={data?.sourceCode}
+						result={data?.result}
 						multipleData={data.multipleData}
+            techStack={data?.techStack}
 						imageClass='h-12 w-12 object-contain md:-left-16 rounded-xl'
 					>
 						<ul class='ml-4 list-disc text-muted-foreground'>

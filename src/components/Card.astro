@@ -2,6 +2,9 @@
 import { Image } from 'astro:assets'
 import type { ImageMetadata } from 'astro'
 import { cn } from '@/utils'
+import Label from './Label.astro'
+import { Icon } from 'astro-icon/components'
+import Button from './Button.astro'
 
 const {
 	as: Tag = 'div',
@@ -16,6 +19,9 @@ const {
 	headingCenter = false,
 	multiple = false,
 	multipleData,
+	sourceCode,
+	result,
+	techStack,
 	...props
 } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
@@ -70,6 +76,27 @@ if (imagePath) {
 						<h2 class='text-muted-foreground'>{date}</h2>
 					</div>
 					<slot />
+					<div class='flex gap-6'>
+						{sourceCode && (
+							<Label title='Repository' as='a' href={sourceCode} target='_blank' class='w-fit'>
+								<Icon name='mdi:github' slot='icon' size={20} color='#CCCCCC' />
+							</Label>
+						)}
+
+						{result && (
+							<Label title='See Result' as='a' href={result} target='_blank' class='w-fit'>
+								<Icon name='mdi:link' slot='icon' size={20} color='#CCCCCC' />
+							</Label>
+						)}
+					</div>
+
+					{techStack && (
+						<div class='mt-5 flex gap-2'>
+							{techStack.map((data: string) => (
+								<Button title={data} style='pill' className='disabled' />
+							))}
+						</div>
+					)}
 				</>
 			)
 		}
