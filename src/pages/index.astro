@@ -8,7 +8,7 @@ import SkillLayout from '../components/SkillLayout.astro'
 
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-import astro from '../assets/about-astro.png'
+import profile from '../assets/profile-picture.jpg'
 const languages = ['Indonesia', 'English']
 const frontend = ['HTML', 'Javascript', 'ReactJS', 'React Native', 'NextJS', 'Typescript']
 const styling = ['CSS', 'SASS', 'Tailwind', 'Styled Components']
@@ -108,9 +108,9 @@ const experiences = [
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
-				src={astro}
+				src={profile}
 				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
+				class='h-44 w-auto rounded-full bg-[#FFBE98] p-2'
 				loading='eager'
 			/>
 
