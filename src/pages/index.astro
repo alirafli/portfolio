@@ -159,43 +159,14 @@ const experiences = [
 			}
 		</Section>
 
-		<Section title=`Blogs (${blogs.length})`>
-			{
-				blogs.map((data) => (
-					<Card heading={data.title} date={data.date} as='a' target='_blank' href={data.href} />
-				))
-			}
-		</Section>
-
-		<Section title='Education'>
-			<Card
-				heading='Brawijaya University'
-				subheading='Bachelor of Information Technology - GPA 3.76/4.00'
-				date='Dec 2020 - Feb 2024'
-				imagePath='/src/assets/brawijaya-logo.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<p>Relevant Coursework</p>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Software Engineering</li>
-					<li>Algorithms</li>
-					<li>Databases</li>
-					<li>System Design</li>
-					<li>Website</li>
-				</ul>
-			</Card>
-		</Section>
-
-		<Section title='Projects'>
-			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+		<!-- <Section title='Projects'>
+			<div class='grid grid-cols-1 gap-6 sm:grid-cols-2'>
 				<ProjectCard
 					href='https://www.google.com'
 					heading='Consectetur'
 					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 					imagePath='/src/assets/coming-soon.png'
 					altText='Example'
-					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
 					as='div'
@@ -203,10 +174,9 @@ const experiences = [
 					subheading=''
 					imagePath='/src/assets/coming-soon.png'
 					altText='Lorem, ipsum dolor sit'
-					class='w-full sm:w-1/2'
 				/>
 			</div>
-		</Section>
+		</Section> -->
 
 		<!-- <Section title='Certifications'>
 			<Card
@@ -230,6 +200,34 @@ const experiences = [
 				href='https://www.google.com'
 			/>
 		</Section> -->
+
+		<Section title='Education'>
+			<Card
+				heading='Brawijaya University'
+				subheading='Bachelor of Information Technology - GPA 3.76/4.00'
+				date='Dec 2020 - Feb 2024'
+				imagePath='/src/assets/brawijaya-logo.png'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<p>Relevant Coursework</p>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Software Engineering</li>
+					<li>Algorithms</li>
+					<li>Databases</li>
+					<li>System Design</li>
+					<li>Website</li>
+				</ul>
+			</Card>
+		</Section>
+
+		<Section title=`Blogs (${blogs.length})`>
+			{
+				blogs.map((data) => (
+					<Card heading={data.title} date={data.date} as='a' target='_blank' href={data.href} />
+				))
+			}
+		</Section>
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
