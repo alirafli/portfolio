@@ -1,9 +1,8 @@
 ---
 import PageLayout from '@/layouts/BaseLayout.astro'
 import Button from '@/components/Button.astro'
-import  {experiences} from '@/data/experiences.tsx'
+import { activities } from '@/data/activities.tsx'
 import Card from '@/components/Card.astro'
-
 ---
 
 <PageLayout meta={{ title: 'Experience' }}>
@@ -26,19 +25,20 @@ import Card from '@/components/Card.astro'
 
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
-				<h1 class='mb-1 text-2xl font-bold'>experiences ({experiences.length})</h1>
-				<p>the experiences I took part in, such as internships and the like, were so interesting!</p>
+				<h1 class='mb-1 text-2xl font-bold'>Activities ({activities.length})</h1>
+				<p>activities that I have participated in to develop myself</p>
 			</div>
 
 			{
-				experiences.map((data) => (
+				activities.map((data) => (
 					<Card
 						heading={data.title}
 						subheading={data.role}
 						date={data.date}
 						imagePath={data.imagePath}
 						altText={data.title}
-            multiple={data.multiple}
+						multiple={data.multiple}
+						multipleData={data?.multipleData}
 						imageClass='h-12 w-12 object-contain md:-left-16 rounded-xl'
 					>
 						<ul class='ml-4 list-disc text-muted-foreground'>
