@@ -18,6 +18,8 @@ const languages = ['Indonesia', 'English']
 const frontend = ['HTML', 'Javascript', 'ReactJS', 'React Native', 'NextJS', 'Typescript']
 const styling = ['CSS', 'SASS', 'Tailwind', 'Styled Components']
 const others = ['Java']
+
+const dataShown = 3
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -62,7 +64,7 @@ const others = ['Java']
 
 		<Section title=`Experiences (${experiences.length})`>
 			{
-				experiences.slice(0, 4).map((data) => (
+				experiences.slice(0, dataShown).map((data) => (
 					<Card
 						heading={data.title}
 						subheading={data.role}
@@ -82,9 +84,9 @@ const others = ['Java']
 			}
 
 			{
-				experiences.length > 4 && (
+				experiences.length > dataShown && (
 					<Card
-						heading={`See More (+${experiences.length - 4})`}
+						heading={`See More (+${experiences.length - dataShown})`}
 						headingCenter
 						href='/experience'
 						as='a'
@@ -95,7 +97,7 @@ const others = ['Java']
 
 		<Section title=`Activities (${activities.length})`>
 			{
-				activities.slice(0, 4).map((data) => (
+				activities.slice(0, dataShown).map((data) => (
 					<Card
 						heading={data.title}
 						subheading={data.role}
@@ -119,9 +121,9 @@ const others = ['Java']
 			}
 
 			{
-				activities.length > 4 && (
+				activities.length > dataShown && (
 					<Card
-						heading={`See More (+${activities.length - 4})`}
+						heading={`See More (+${activities.length - dataShown})`}
 						headingCenter
 						href='/experience'
 						as='a'
