@@ -30,38 +30,6 @@ export const experiences = [
 		]
 	},
 	{
-		title: 'Basic Computing Community (BCC)',
-		multiple: true,
-		imagePath: '/src/assets/bcc-logo.png',
-		multipleData: [
-			{
-				role: 'Head of Frontend Department',
-				date: 'Dec 2022 - Oct 2023',
-				imagePath: '/src/assets/bcc-logo.png',
-				desc: [
-					'Oversaw and led multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
-				]
-			},
-			{
-				role: 'Deputy Head of Frontend Department',
-				date: 'Jan 2022 - Dec 2022',
-				imagePath: '/src/assets/bcc-logo.png',
-				desc: [
-					'Oversaw multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
-				]
-			},
-			{
-				role: 'staff of Frontend Department',
-				date: 'Mar 2021 - Jan 2022',
-				imagePath: '/src/assets/bcc-logo.png',
-				desc: [
-					'Participating in an internship program provided at the early stage. Being part of a team with a product manager, product designer, and backend developer.',
-					'Learning from basic JavaScript to mastering ReactJS. Attending workshops related to ReactJS covering topics from state management to testing.'
-				]
-			}
-		]
-	},
-	{
 		title: 'Kawan Bantu',
 		multiple: false,
 		role: 'Front-End Web Development Intern',

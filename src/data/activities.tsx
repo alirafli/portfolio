@@ -1,9 +1,41 @@
 export const activities = [
 	{
+		title: 'Basic Computing Community (BCC)',
+		multiple: true,
+		imagePath: '/src/assets/bcc-logo.png',
+		multipleData: [
+			{
+				role: 'Head of Frontend Department',
+				date: 'Dec 2022 - Oct 2023',
+				imagePath: '/src/assets/bcc-logo.png',
+				desc: [
+					'Oversaw and led multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+				]
+			},
+			{
+				role: 'Deputy Head of Frontend Department',
+				date: 'Jan 2022 - Dec 2022',
+				imagePath: '/src/assets/bcc-logo.png',
+				desc: [
+					'Oversaw multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+				]
+			},
+			{
+				role: 'staff of Frontend Department',
+				date: 'Mar 2021 - Jan 2022',
+				imagePath: '/src/assets/bcc-logo.png',
+				desc: [
+					'Participating in an internship program provided at the early stage. Being part of a team with a product manager, product designer, and backend developer.',
+					'Learning from basic JavaScript to mastering ReactJS. Attending workshops related to ReactJS covering topics from state management to testing.'
+				]
+			}
+		]
+	},
+	{
 		title: 'Brawijaya Entrepreneur Festival (BEF) - (Committee)',
 		multiple: false,
 		role: 'Staff of Web Development',
-		date: 'Nov 2022',
+		date: 'Nov 2022 - Dec 2022',
 		imagePath: '/src/assets/bef-logo.png',
 		sourceCode: 'https://github.com/alirafli/bef-2022',
 		result: 'https://brawijaya-entrepreneur-festival.netlify.app/',
@@ -17,6 +49,7 @@ export const activities = [
 		title: 'Hology 4.0 - (Committee)',
 		multiple: false,
 		role: 'Staff of Frontend Web Development',
+		imagePath: '/src/assets/hology-logo.jpg',
 		date: 'May 2021 - Nov 2021',
 		desc: ['Slicing the whole page in the HOLOGY 4.0 website using ReactJS and SASS']
 	},
