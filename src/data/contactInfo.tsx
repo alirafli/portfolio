@@ -1,13 +1,14 @@
 export const contactInfo = [
 	{
-		title: 'Frontend Engineer',
-		icon: 'mdi:work-outline',
-		disabled: true
+		title: 'Github',
+		icon: 'mdi:github',
+		href: 'https://github.com/alirafli',
+		disabled: false
 	},
 	{
 		title: 'Resume',
 		icon: 'mdi:file-document-outline',
-		href: '/src/assets/CV_Mohammad Ali Rafli.pdf',
+		href: 'src/assets/CV_Mohammad Ali Rafli.pdf',
 		disabled: false
 	},
 	{
