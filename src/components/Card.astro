@@ -91,9 +91,9 @@ if (imagePath) {
 					</div>
 
 					{techStack && (
-						<div class='mt-5 flex gap-2'>
+						<div class='flex gap-2 flex-wrap'>
 							{techStack.map((data: string) => (
-								<Button title={data} style='pill' className='disabled' />
+								<Button title={data} style='pill' className='' />
 							))}
 						</div>
 					)}

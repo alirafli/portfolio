@@ -5,6 +5,7 @@ export const experiences = [
 		role: 'Frontend Web Developer Intern',
 		date: 'Jun 2023 - Mar 2024',
 		imagePath: '/src/assets/delos-logo.png',
+		techStack: ['NextJS', 'Typescript', 'Redux', 'React Query'],
 		desc: [
 			'Enhancing and managing product line dashboards for efficient data management, utilizing Next.js and TypeScript for dashboard improvements and code optimization. Additionally, contributed to the design system by creating and refining components with TypeScript and Storybook, significantly improving interface consistency and usability across products.'
 		]
@@ -25,6 +26,7 @@ export const experiences = [
 		role: 'Software Engineer Intern',
 		date: 'Dec 2022 - Mar 2023',
 		imagePath: '/src/assets/socles-logo.jpg',
+		techStack: ['NextJS', 'React Native - Ignite', 'Typescript', 'SWR','MobX', 'Tailwind'],
 		desc: [
 			'Played a key role in the development of the Socles Social App, employing React Native Ignite (Typescript), and the Socles Web App, using Next.js (Typescript), contributing to significant user engagement growth.'
 		]
@@ -35,6 +37,7 @@ export const experiences = [
 		role: 'Front-End Web Development Intern',
 		date: 'Mar 2022 - Jun 2022',
 		imagePath: '/src/assets/kb-logo.jpg',
+		techStack: ['ReactJS', 'Styled Components'],
 		desc: [
 			'Focused on slicing the Kawanbantu website, utilized ReactJS and Styled Components for effective transformation of designs into responsive web pages. Ensured the implementation of visual elements was seamless, contributing to an intuitive user interface and improved user experience.'
 		]

@@ -51,6 +51,7 @@ export const activities = [
 		role: 'Staff of Frontend Web Development',
 		imagePath: '/src/assets/hology-logo.jpg',
 		date: 'May 2021 - Nov 2021',
+		techStack: ['ReactJS', 'SASS'],
 		desc: ['Slicing the whole page in the HOLOGY 4.0 website using ReactJS and SASS']
 	},
 	{
