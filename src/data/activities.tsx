@@ -9,7 +9,7 @@ export const activities = [
 				date: 'Dec 2022 - Oct 2023',
 				imagePath: '/src/assets/bcc-logo.png',
 				desc: [
-					'Oversaw and led multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+					'Guided the progress of the BCC community at the university as the Head of the Front End Department. The technologies utilized and taught were primarily focused on ReactJs, NextJs, Typescript for web development, and Flutter for mobile development.'
 				]
 			},
 			{
@@ -17,7 +17,8 @@ export const activities = [
 				date: 'Jan 2022 - Dec 2022',
 				imagePath: '/src/assets/bcc-logo.png',
 				desc: [
-					'Oversaw multiple key projects, including software development and internal workshops, driving the enhancement of technical skills within the community.'
+					'Assisted in ensuring the success of an internal frontend workshop focused on React.js, state management, and related technologies.',
+					'Assisting in improving communication quality within and between departments internally.'
 				]
 			},
 			{
@@ -25,8 +26,8 @@ export const activities = [
 				date: 'Mar 2021 - Jan 2022',
 				imagePath: '/src/assets/bcc-logo.png',
 				desc: [
-					'Participating in an internship program provided at the early stage. Being part of a team with a product manager, product designer, and backend developer.',
-					'Learning from basic JavaScript to mastering ReactJS. Attending workshops related to ReactJS covering topics from state management to testing.'
+					'Successfully completed an early-stage internship, collaborating with backend, product management, and product design teams in developing a product.',
+					'Attended workshops covering React.js, unit testing, state management, Redux, and related technologies.'
 				]
 			}
 		]

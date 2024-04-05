@@ -7,7 +7,11 @@ export const experiences = [
 		imagePath: '/src/assets/delos-logo.png',
 		techStack: ['NextJS', 'Typescript', 'Redux', 'React Query'],
 		desc: [
-			'Enhancing and managing product line dashboards for efficient data management, utilizing Next.js and TypeScript for dashboard improvements and code optimization. Additionally, contributed to the design system by creating and refining components with TypeScript and Storybook, significantly improving interface consistency and usability across products.'
+			'Developing and maintaining multiple websites using technologies such as Next.js, TypeScript, Redux, React Query, and related technologies.',
+			'Contributing to the development of a design system utilized by the frontend team, both in implementing new components and updating existing ones.',
+			'Collaborating with the backend team to manage data through APIs and working closely with the design team to accurately implement predetermined designs.',
+			'Working on and documenting the jest-image-snapshot feature to compare slicing results with existing designs in Figma.',
+			'Given the opportunity to explore new areas beyond frontend, such as implementing CI/CD pipelines and softskills.'
 		]
 	},
 	{
@@ -29,7 +33,10 @@ export const experiences = [
 		imagePath: '/src/assets/socles-logo.jpg',
 		techStack: ['NextJS', 'React Native - Ignite', 'Typescript', 'SWR', 'MobX', 'Tailwind'],
 		desc: [
-			'Played a key role in the development of the Socles Social App, employing React Native Ignite (Typescript), and the Socles Web App, using Next.js (Typescript), contributing to significant user engagement growth.'
+			'Developing and maintaining website using Next.js, TypeScript, Tailwind CSS, and related technologies.',
+			'Developing a mobile application using React.js and MobX, utilized by end-users. Adding new features and performing maintenance tasks as needed.',
+			'Working closely with both the backend and design teams to achieve optimal development of applications and websites.',
+			'Assisting the lead in collecting user opinions and conducting offline research in the Malang region, East Java.'
 		]
 	},
 	{
@@ -40,7 +47,8 @@ export const experiences = [
 		imagePath: '/src/assets/kb-logo.jpg',
 		techStack: ['ReactJS', 'Styled Components'],
 		desc: [
-			'Focused on slicing the Kawanbantu website, utilized ReactJS and Styled Components for effective transformation of designs into responsive web pages. Ensured the implementation of visual elements was seamless, contributing to an intuitive user interface and improved user experience.'
+			'Assisting in the development of frontend websites by aligning them with designs provided by the design team.',
+			'Ensuring responsive slicing processes for both mobile and desktop platforms.'
 		]
 	}
 ]
