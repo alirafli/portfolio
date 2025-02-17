@@ -8,7 +8,7 @@ export const contactInfo = [
 	{
 		title: 'Resume',
 		icon: 'mdi:file-document-outline',
-		href: 'https://drive.google.com/file/d/1xOIxm5fzCL3ajDzceVU8NOhEgHpjuXXq/view?usp=sharing',
+		href: 'https://drive.google.com/file/d/14OvJQYW4gITvP5lnqanwi28OYuye85x6/view?usp=sharing',
 		disabled: false
 	},
 	{

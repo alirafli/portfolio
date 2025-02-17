@@ -1,5 +1,21 @@
 export const experiences = [
 	{
+		title: 'PT. Pharos Indonesia',
+		multiple: false,
+		role: 'Frontend Engineer',
+		date: 'May 2024 - Now',
+		imagePath: '/src/assets/Logo_Pharos.png',
+		techStack: ['NextJS', 'Typescript', 'Design System', 'Material-UI'],
+		desc: [
+			' Develop and maintain user interfaces for web applications using Next.js, React, and other modern technologies.',
+			'Collaborate closely with designers to implement user interface designs and ensure a seamless and consistent user experience across the platform.',
+			'Work alongside backend engineers to integrate frontend components with backend services and APIs effectively.',
+			'Optimize web applications to achieve high performance, responsiveness, and scalability.',
+			'Conduct thorough code reviews and ensure adherence to coding best practices.',
+			'Create and maintain a design system utilized across the organization to enhance design consistency and development efficiency.'
+		]
+	},
+	{
 		title: 'Delos',
 		multiple: false,
 		role: 'Frontend Web Developer Intern',
